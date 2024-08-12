@@ -1,0 +1,147 @@
+.content {
+    display: flex;
+    color: white;
+    height: fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    opacity: 0;
+
+    
+}
+
+.contentTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 250px;
+    margin-right: 5px;
+    background-color: rgb(31, 56, 85);
+
+    border: 0.1rem solid #fff;
+    box-shadow: 0 0 .1rem #fff,
+                0 0 .1rem #fff,
+                0 0 1rem #00a2ff,
+                0 0 0rem #00a2ff,
+                0 0 0rem #00a2ff,
+                inset 0 0 0.65rem #00a2ff; 
+}
+
+.contentTitle h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    margin: 0 auto;
+}
+
+
+
+
+.contentText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 1500px;
+    margin-right: 5px;
+    background-color: rgb(26, 43, 60);
+
+    border: 0.1rem solid #fff;
+    box-shadow: 0 0 .1rem #fff,
+                0 0 .1rem #fff,
+                0 0 1rem #00a2ff,
+                0 0 0rem #00a2ff,
+                0 0 0rem #00a2ff,
+                inset 0 0 0.65rem #00a2ff; 
+    
+}
+
+.contentText p {
+    margin: 1px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
+
+body {
+    text-align: center;
+    background-color: rgb(25, 30, 40);
+}
+
+.welcomeText {
+    margin: 50px;
+    color: white;
+    opacity: 0;
+
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.welcomeText h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 96px;
+
+    text-shadow:
+    0 0 2px #fff,
+    0 0 2px #fff,
+    0 0 12px #00a2ff,
+    0 0 0px #00a2ff,
+    0 0 0px #00a2ff,
+    0 0 8px #00a2ff;
+}
+
+header {
+    color: white;
+}
+
+.navbar-brand, .nav-link {
+    color:white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+}
+
+.navbar-brand {
+    font-size: 34px;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: rgba(146, 146, 146, 0.8);
+}
+
+.active {
+    color: rgb(25, 30, 40) !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.introduction {
+    animation-name: fadeIn;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.purpose {
+    animation-name: fadeIn;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+    animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+}
