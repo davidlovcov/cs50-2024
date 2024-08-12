@@ -1,0 +1,24 @@
+1. Q: If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+       SELECT AVG(energy) as "average energy",
+              AVG(valence) as "average valence",
+              AVG(danceability) as "average danceability"
+       FROM songs;
+
+    A:  By running the code above we get following results:
+
+        average energy: 0.65906
+        average valence: 0.484443
+        average danceability: 0.71646
+
+        With those results we can say that the user loves songs,
+        that lead to dancing and have a lot of energy.
+        The user prefers both positive and negative songs almost evenly.
+
+
+2. Q: Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener.
+      What better ways of calculating this aura would you propose?
+
+    A: The analysis counts only for the year 2018 and doesn't include other dates.
+       A listeners mood can vary by time.
+       To get a safe bet on what the listeners Song Aura really is you have to make a long-time analysis.

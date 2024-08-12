@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: When sorting sorted50000.txt this was the fastest since bubble sort doesn't have to sort and needs to iterate only 1 time
+
+sort2 uses: Merge Sort
+
+How do you know?: Fill
+
+sort3 uses: Selection Sort
+
+How do you know?: It has to iterate through sorted50000.txt for the amount of numbers and then again iterate.
