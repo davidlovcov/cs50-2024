@@ -1,0 +1,523 @@
+.navbar-brand, .nav-link {
+    color:white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+}
+
+.navbar-brand {
+    font-size: 34px;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: rgba(146, 146, 146, 0.8);
+}
+
+.nav-link.active {
+    color: rgb(159, 217, 255) !important;
+    text-decoration: underline;
+}
+
+body {
+    text-align: center;
+    background-color: rgb(25, 30, 40);
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    gap: 0.85em;
+    height: calc(100vh - 3px);
+    width: 100%;
+    padding: 0.7em;
+}
+
+.cv-leftSide {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 8px;
+    float: left;
+    width: 512px;
+}
+
+.about-me {
+    background-color: rgb(26, 43, 60);
+    display: inline-block;
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    opacity: 0;
+    animation-name: fade-in;
+    animation-timing-function:  ease-in-out;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+}
+
+.my-picture {
+    margin-top: 0.5rem;
+    height: 7em;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.picture-file {
+    border-radius: 50%;
+    max-width: 115px;
+    max-height: 115px;
+}
+
+.my-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.3em;
+    margin: 0;
+}
+
+.my-name-text {
+    color: white;
+    margin: 0;
+    font-size: 42px;
+}
+
+.my-occupation {
+    display: inline-block;
+    justify-content: center;
+}
+
+.my-occupation-text {
+    color: white;
+    margin: 0;
+    font-size: 24px;
+
+    margin-bottom: 0.5em;
+}
+
+.skills {
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 100%;
+    background-color: rgb(32, 51, 70);
+    opacity: 0;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.8s;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+
+}
+
+.languages-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 0.2em solid rgb(22, 35, 49);
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
+}
+
+.language {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular-progressbar {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    height: 4.688em;
+    width: 4.688em;
+    text-align: center;
+    background: conic-gradient(white 3.6deg, rgb(32, 51, 70) 0deg);
+}
+
+.circular-progressbar::before {
+    content: "";
+    position: absolute;
+    height: 4.313em;
+    width: 4.313em;
+    border-radius: 50%;
+    background-color: rgb(32,51,70);
+}
+
+.circular-progressbar-value {
+    position: relative;
+    color: white; /* or any contrasting color */
+    font-weight: bold;
+    margin: 0;
+    padding-top: 4.75px;
+    font-size: 1.75em;
+}
+
+.language-name {
+    font-size: 1.35em;
+}
+
+.code-skills {
+    padding-top: 5px;
+    
+}
+
+.code-skills span {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+}
+
+.progress {
+    display: flex;
+    text-align: center;
+    position: relative;
+    height: 26px;
+    
+    background-color: rgb(32,51,70);
+    -webkit-transition: none;
+       -o-transition: none;
+          transition: none;
+    margin-bottom: 30px;
+}
+
+.progress::before {
+    content:"";
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 7px;
+    position: absolute;
+    background-color: transparent;
+    height: 26px;
+    width: 100%;
+}
+
+.progress-bar {
+    background-color: rgb(52, 86, 129);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    -webkit-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
+.cv-rightSide {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    height: 100%;
+    width: 2048px;
+    padding: 10px;
+    gap: 20px;
+    background-color: rgb(47, 68, 90);
+    opacity: 0;
+    animation-name: fade-in;
+    animation-timing-function:  ease-in-out;
+    animation-duration: 0.75s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    overflow: scroll;
+    overflow-x: hidden; 
+}
+
+.work-experiences {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 33%;
+    padding: 0.7em;
+    background-color: black;
+}
+
+.work-experiences h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.seperator {
+    display: flex;
+    border: 1px solid rgb(180, 255, 220);
+    display: block;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+.seperator:first-child {
+    margin-top: 0px;
+}
+
+tr:last-child {
+    margin-bottom: 0;
+}
+
+td, p {
+    font-size: 24px;
+    margin: 0;
+}
+
+td, p {
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.job-title, .education-title, .project-title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.job-location, .job-date {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: gray;
+}
+
+.job-date, .education-date, .projects-date {
+    width: 100%;
+    text-align: right;
+}
+
+.job-location, .education-location, .project-location {
+    padding-right: 164px;
+    width: max-content;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    line-height: 54px;
+}
+
+.vertical-line {
+    width: 2px;
+    background-color: rgb(180, 255, 220);
+}
+
+button {
+    color: white;
+    border: none;
+    padding: 0;
+    font-size: 48px;
+    background: none;
+    cursor: pointer;
+}
+
+button:hover {
+    color: rgb(182, 182, 182);
+}
+
+button:active {
+    color: rgb(141, 141, 141);
+}
+
+button.active {
+    color: rgb(188, 255, 216);
+}
+
+.content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0s;
+}
+
+.content.active {
+    display: flex;
+    position: relative;
+    visibility: visible;
+    padding: 50px;
+    padding-top: 0px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.content.active tr {
+    opacity: 0;
+    animation: fade-in 1s ease-in forwards;
+}
+
+.content.active tr:nth-child(1) {
+    animation-delay: 0;
+}
+
+.content.active tr:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.content.active tr:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.content.active tr:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.content.active tr:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.content.active tr:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.content.active tr:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.content.active tr:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.content.active tr:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+.content.active tr:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+.content.active tr:nth-child(11) {
+    animation-delay: 1s;
+}
+
+.content.active tr:nth-child(12) {
+    animation-delay: 1.1s;
+}
+
+.content.active::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #000000 100%);
+    transition: all 2s ease;
+}
+
+tr {
+    display: block;
+}
+
+tr:last-child, td {
+    padding: 0;
+}
+
+
+
+.education-grade, .education-focus {
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+}
+
+.job-location, .education-location, .project-location,
+.job-date, .education-date, .project-date {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: rgb(179, 179, 179);
+}
+
+.education-date, .job-date, .project-date {
+    font-size: 1.4em;
+}
+
+.job-location, .education-location, .project-location {
+    padding-right: 164px;
+}
+
+.cv-leftSide, .cv-rightSide, p {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+}
+
+/* width */
+.cv-rightSide::-webkit-scrollbar {
+width: 14px;
+}
+
+/* Track */
+.cv-rightSide::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey;
+border-radius: 6px;
+}
+
+/* Handle */
+.cv-rightSide::-webkit-scrollbar-thumb {
+background: rgb(166, 237, 255);
+border-radius: 6px;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1208px) {
+    .buttons {
+        gap: 14px;
+        font-size: 1px !important;
+    }
+
+    .button {
+        font-size: 1px !important;
+    }
+
+    
+}
+
+@media (max-width: 884px) {
+    /* Add your CSS rules for 768 width here */
+    .wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .cv-leftSide, .cv-rightSide {
+        width: 100%;
+    }
+
+    .cv-rightSide {
+        padding: 10px;
+    }
+
+    .content {
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        transition: none;
+        padding: 0;
+    }
+
+    .content.active tr {
+        opacity: 1;
+        animation: none;
+    }
+
+    .job-location, .education-location, .project-location {
+        padding-right: 0;
+    }
+
+    .buttons {
+        gap: 12px;
+        line-height: 54px;
+        font-size: 8px;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+}

@@ -6,8 +6,6 @@
     margin: 0 auto;
     margin-bottom: 40px;
     opacity: 0;
-
-    
 }
 
 .contentTitle {
@@ -35,9 +33,6 @@
     font-size: 50px;
     margin: 0 auto;
 }
-
-
-
 
 .contentText {
     display: flex;
@@ -69,6 +64,7 @@
 body {
     text-align: center;
     background-color: rgb(25, 30, 40);
+    color: white;
 }
 
 .welcomeText {
@@ -118,16 +114,8 @@ header {
 }
 
 .active {
-    color: rgb(25, 30, 40) !important;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    color: rgb(159, 217, 255) !important;
+    text-decoration: underline;
 }
 
 .introduction {
@@ -144,4 +132,356 @@ header {
     animation-duration: 0.5s;
     animation-delay: 1.6s;
     animation-fill-mode: forwards;
+}
+
+.introductionTitle {
+    animation-name: slideInFromLeft;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.8s;
+}
+
+.introductionText {
+    animation-name: slideInFromRight;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.8s;
+}
+
+.purposeTitle {
+    animation-name: slideInFromRight;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1.6s;
+}
+
+.purposeText {
+    animation-name: slideInFromLeft;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1.6s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+#audio {
+    display: none;
+}
+
+.player {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 600px;
+    height: fit-content;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 10px;
+    font-family: "Bebas Neue", sans-serif;
+    line-height: 20px;
+
+    border: 0.1rem solid #fff;
+    box-shadow: 0 0 .1rem #fff,
+                0 0 .1rem #fff,
+                0 0 1rem #00a2ff,
+                0 0 0rem #00a2ff,
+                0 0 0rem #00a2ff,
+                inset 0 0 0.65rem #00a2ff; 
+}
+
+.song-image {
+    height: 150px;
+    width: 150px;
+    margin-right: 10px;
+}
+
+.song-image img {
+    border-radius: 10%;
+    height: 150px;
+    width: 150px;
+}
+
+.player-right-side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+}
+
+.song-info {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+#song-title {
+    font-size: 26px;
+    padding: 0;
+    margin: 0;
+}
+
+#song-artist {
+    font-size: 20px;
+    color: rgb(155, 155, 155);
+}
+
+.song-timer {
+    padding-bottom: 3px;
+}
+
+.song-time {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    font-size: 16px;
+    padding-bottom: 1px;
+}
+
+#song-timebar {
+    display: flex;
+    width: 100%;
+    height: 6px;
+    border-radius: 8px;
+    background-color: rgba(209, 209, 209, 0.089);
+}
+
+#song-timebar::before {
+    content: "";
+    width: var(--track-width, 0%);  
+    background-color: white;
+    transition: width 12   0.4s linear;
+}
+
+#song-timebar:hover {
+    cursor: pointer;
+}
+
+.skip-pause, .volume-repeat img {
+    width: 35px;
+    height: 35px;
+}
+
+.skip-pause, .volume-repeat:hover img {
+    cursor: pointer;
+}
+
+#play-pause-button {
+    display: block;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+}
+
+.song-button.playing {
+    content: url("./icons/pause-button-white.svg");
+}
+
+.song-button.paused {
+    content: url("./icons/play-button-white.svg");
+}
+
+.song-button.repeat-off {
+    content: url("./icons/repeat-off.svg");
+}
+
+.song-button.repeat-on {
+    content: url("./icons/repeat-on.svg");
+}
+
+.song-button:hover {
+    opacity: 0.7;
+}
+
+.song-button:active {
+    opacity: 0.4;
+}
+
+#repeat {
+    color: white;
+}
+
+#dropdown {
+    display: inline;
+    position: relative;
+    justify-content: center;    
+    align-content: center;
+}
+
+#volume {
+    display: none;
+    position: absolute;
+    visibility: visible;
+    writing-mode: vertical-lr; 
+    direction: rtl;
+    width: 6px;
+    height: 80px;
+    vertical-align: bottom;
+    left: 50%;
+    bottom: 50%;
+    transform: translateY(-20px);
+    accent-color: white;
+}
+
+
+
+#song-volume {
+    height: 25px;
+}
+
+.muted {
+    content: url("./icons/mute-white.svg");
+    height: 25px;
+}
+
+#song-volume:hover {
+    display: inline;
+}
+
+.skip-pause {
+    display: flex;
+    float: left;
+}
+
+.volume-repeat {
+    display: flex;
+    justify-content: center;
+    float: right;
+}
+
+.songs {
+    display: flex;
+    flex-direction: column;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    user-select: none;
+}
+
+.song:hover {
+    cursor: pointer;
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-300px)
+    }
+    to {
+        transform: translateX(0px)
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(300px)
+    }
+    to {
+        transform: translateX(0px)
+    }
+}
+
+@media (max-width: 616px) {
+    .player {
+        width: 100%;
+    }
+
+    #song-image, .song-image {
+        height: 80px;
+        width: 80px;
+    }
+
+    .song-info {
+        margin-bottom: 5px;
+    }
+
+    #song-title {
+        font-size: 16px;
+    }
+
+    #song-artist {
+        font-size: 12px;
+    }
+
+    .song-time {
+        font-size: 14px;
+    }
+
+    .song-button {
+        width: 25px;
+        height: 25px;
+    }
+
+    .skip-pause {
+        width: 25px;
+        height: 25px;
+    }
+
+    .song-button.playing {
+        content: url("./icons/pause-button-white.svg");
+        width: 25px !important;
+        height: 25px !important;
+        align-self: flex-start;
+    }
+
+    .song-button.paused {
+        content: url("./icons/play-button-white.svg");
+        width: 25px !important;
+        height: 25px !important;
+        align-self: flex-start;
+    }
+
+    .song-button.repeat-off {
+        content: url("./icons/repeat-off.svg");
+        width: 25px;
+        height: 25px;
+    }
+
+    .song-button.repeat-on {
+        content: url("./icons/repeat-on.svg");
+        width: 25px;
+        height: 25px;
+    }
+
+    .volume-repeat img {
+        width: 25px;
+        height: 25px;
+    }
+
+    #repeat {
+        height: 25px;
+        width: 25px;
+    }
+
+    #song-volume {
+        height: 20px !important;
+        width: 20px !important;
+    }
+
+    .player-right-side {
+        height: 100px;
+    }
+
+    .songs {
+        gap: 24px
+    }
 }

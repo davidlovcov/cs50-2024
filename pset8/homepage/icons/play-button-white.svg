@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<title>play-button-white</title>
+	<defs>
+		<image  width="6" height="9" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAJCAMAAAAmRK2vAAAAAXNSR0IB2cksfwAAADlQTFRF////////////////////////////////////////////////////////////////////////////tBAeHgAAABN0Uk5TpxAA/+Q6/IMFziKT91zUK6MIX/oYcW8AAAA2SURBVHicHcoxCgAhFAPRDIIoYuP9D6nINoKw+VYvkEEgiQQ3kMcxUuahElQ+09hOOsvlmHH+mogGLcxSsFkAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Layer" href="#img1" x="9" y="8"/>
+</svg>

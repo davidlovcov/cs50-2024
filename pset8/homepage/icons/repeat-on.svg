@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<title>repeat-svg</title>
+	<defs>
+		<image  width="15" height="8" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAIAQMAAAAcHTexAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAA////pdmf3QAAAAJ0Uk5TAP9bkSK1AAAAHElEQVR4nGNkSGBkqGD8/x+EHsxgfNDA+EABiABuQAm1rkGLgwAAAABJRU5ErkJggg=="/>
+		<image  width="15" height="8" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAIAQMAAAAcHTexAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAA////pdmf3QAAAAJ0Uk5TAP9bkSK1AAAAHElEQVR4nGNk4GMEIh4mRptLjP//g5DNEUaeLwA6xAc9tjAx+wAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Layer" href="#img1" x="4" y="5"/>
+	<use id="Layer" href="#img2" x="5" y="11"/>
+</svg>
