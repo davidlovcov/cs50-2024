@@ -2,7 +2,7 @@
     display: flex;
     color: white;
     height: fit-content;
-    width: fit-content;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 40px;
     opacity: 0;
@@ -400,7 +400,37 @@ header {
     }
 }
 
-@media (max-width: 616px) {
+@media screen and (max-width: 1700px) {
+    .contentTitle h2 {
+        font-size: 46px;
+    }
+
+    .contentText p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .contentTitle h2 {
+        font-size: 42px;
+    }
+
+    .contentText p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .contentTitle h2 {
+        font-size: 38px;
+    }
+
+    .contentText p {
+        font-size: 12px;    
+    }
+}
+
+@media screen and (max-width: 616px) {
     .player {
         width: 100%;
     }
